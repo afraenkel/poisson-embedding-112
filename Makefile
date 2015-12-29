@@ -1,8 +1,8 @@
 
-data/pi.m2: res211.m2
-	m2 --script res211.m2
+data/pi.m2: src/lift_bivector.m2
+	cd src && m2 --script lift_bivector.m2
 
 clean:
-	rm data/*
+	rm -f data/*
 
 all: data/pi.m2	
