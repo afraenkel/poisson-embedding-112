@@ -47,7 +47,7 @@ psi = f -> lift(promote(f, Q), S)
 -- Pi is the lifted bivector (the sum of the monomials)
 Br = (i,j) -> lift(promote(Brac(i,j),Q),S)*phi(psi(i))*phi(psi(j))
 
-liftedPi = fold(flatten table(invariants, invariants, Br), (i, j) -> i + j)/2
+liftedPi = fold(flatten table(invariants, invariants, Br), (i, j) -> i + j) / 2
 
 -- ---------------------------------------------------------------------
 -- print the lifted bivector to an output file
