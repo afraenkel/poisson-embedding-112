@@ -1,4 +1,4 @@
-# Poisson Embeddings of R^6/S^1 by the (1,1,2)-resonance action.
+## Poisson Embeddings of R^6/S^1 by the (1,1,2)-resonance action.
 
 This repo attempts to build a framework for finding embeddings of singular quotients of Poisson varieties that respects the underlying Poisson structure on the quotient.  To start with, it's only attempting to find such an embedding for the (1,1,2) circle action on the canonical 6 dimensional symplectic vector space.
 
