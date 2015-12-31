@@ -18,6 +18,7 @@ sBr = (A,B) -> sum(apply(coordPairs,
 
 jacobiator = sBr(liftedPi, liftedPi) / 2
 
+-- check that it vanishes on quotient:
 
-
+promote(jacobiator, XS / promote(I, XS)) == 0
 
