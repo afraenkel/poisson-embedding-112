@@ -1,5 +1,5 @@
-{* Computes the Jacobiator and checks it vanishes
-on the vanishing ideal of the quotient *}
+-- Computes the Jacobiator and checks it vanishes
+-- on the vanishing ideal of the quotient *}
 
 -- load the rings S, XS
 -- load the vanishing ideal I
@@ -22,3 +22,13 @@ jacobiator = sBr(liftedPi, liftedPi) / 2
 
 promote(jacobiator, XS / promote(I, XS)) == 0
 
+-- what is largest degree coeff of jacobiator?
+
+maxDeg = (degree jacobiator)_1
+
+-- function for grabbing deg=n terms of a multivector
+
+degComp = (n, p) -> sum select(terms p, i -> (degree i)_1 == n)
+
+-- create alpha1, alpha2, etc
+-- alpha = sum(entries(transpose(generators(promote(I, XS))) * vars(XS) ** vars(XS)))
