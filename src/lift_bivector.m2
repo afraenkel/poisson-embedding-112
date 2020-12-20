@@ -1,7 +1,8 @@
 
--- n must be 3 right now
-n = 4
-a = (1, 1, 1, 1)
+
+-- a = (1, 1, 2)
+a = apply(separate(",", scriptCommandLine#1), i -> value(i))
+n = #a
 
 AExt = QQ[x_1..x_n, y_1..y_n, t, xx_1..xx_n, yy_1..yy_n]
 
