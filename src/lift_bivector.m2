@@ -1,5 +1,4 @@
 
-
 -- a = (1, 1, 2)
 a = apply(separate(",", scriptCommandLine#1), i -> value(i))
 n = #a
@@ -21,7 +20,6 @@ M = leadTerm groebnerBasis Ja
 Inv = flatten entries lift(sub(M, AExt / K), AExt)
 Inv = select(Inv, i -> i != 0)
 Inv = apply(Inv, a -> promote(a, A))
-
 
 -- Calculate a lifted bracket on the minimal embedding
 
@@ -45,9 +43,7 @@ invariantMatrix = matrix{Inv}
 I = ideal(vars(S) - invariantMatrix)
 
 use R
-
 Q = R/I
-
 use R
 
 -- standard symplectic structure
